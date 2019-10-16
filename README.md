@@ -22,8 +22,8 @@ pip install git+https://github.com/yuryrunx/fping.git
 ## From sourse
 
 ```bash
-git clone {url_to_gitrepo} {path_to_folder}
-pip install {path_to_folder}/dist/fping-1.0.tar.gz
+git clone {url_to_gitrepo} 
+pip install ./fping/dist/fping-0.0.1.dev0.tar.gz
 ```
 
 ## Example
