@@ -28,25 +28,26 @@ pip install {path_to_folder}/dist/fping-1.0.tar.gz
 
 ## Example
 ```python
-import fping 
-ping = fping.FPing()
->>> result = ping.run(['127.0.0.1', '127.0.0.2', '172.16.100.1'])
->>> print(result)
-(['127.0.0.2', '127.0.0.1'], ['172.16.100.1'])
->>> print(result[0])    # Ok
-['127.0.0.2', '127.0.0.1']
->>> print(result[1])    # Fail
-['172.16.100.1']
+from fping import FPing
+
+ping = FPing()
+result = ping.run(['127.0.0.1', '127.0.0.2', '172.16.100.1'])
+print(result[0]) 
+# ['127.0.0.2', '127.0.0.1']  # Ok
+
+print(result[1]) 
+# ['172.16.100.1']            # Fail
+
 ```
 
 
 # How to use
 
 ```python
-import fping
+from fping import FPing
 
 hosts = ['127.0.0.1', '127.0.0.2', '127.0.0.3'] # Your host's list
-ping = fping.FPing()
+ping = FPing()
 result = ping.run(hosts)
 print('Online: {}, Offline: {}'.format(result[0], result[1]))
 ```
